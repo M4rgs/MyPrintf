@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_address.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tamounir <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tamounir <tamounir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 18:43:38 by tamounir          #+#    #+#             */
-/*   Updated: 2024/11/23 15:12:19 by tamounir         ###   ########.fr       */
+/*   Updated: 2025/10/31 03:36:48 by tamounir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,12 @@ static void	ft_putnbr_hex(unsigned long n)
 
 int	ft_print_address(unsigned long n)
 {
-	int	lenthg;
+	int		lenthg;
+	char	*tes;
 
+	tes = (char *)n;
+	if (!tes)
+		return (ft_putstr("(nil)"));
 	lenthg = hex_len(n);
 	if (n == 0)
 		lenthg++;
